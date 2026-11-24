@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শুভ জন্মদিন, নাজমিন! ✨🎂🏮</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Galada, Hind Siliguri, Anek Bangla -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700&family=Galada&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base Cosmic & Royal Gold Theme */
+        :root {
+            --gold-light: #fef08a;
+            --gold-mid: #f59e0b;
+            --gold-dark: #b45309;
+            --rose-glow: #fb7185;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', 'Anek Bangla', sans-serif;
+            background: radial-gradient(ellipse at 50% 0%, #2e1065 0%, #130b2e 45%, #060410 100%);
+            color: #fffbeb;
+            overflow-x: hidden;
+            min-height: 100vh;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .font-galada {
+            font-family: 'Galada', cursive;
+        }
+
+        .font-anek {
+            font-family: 'Anek Bangla', sans-serif;
+        }
+
+        /* Fullscreen Interactive Sky Canvas */
+        #sky-canvas {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Shimmering Royal Gold Gradient Text */
+        .royal-gold-text {
+            background: linear-gradient(
+                110deg,
+                #fde047 0%,
+                #f59e0b 22%,
+                #ffffff 45%,
+                #fb7185 68%,
+                #fde047 100%
+            );
+            background-size: 220% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: goldShimmer 4.5s linear infinite;
+            filter: drop-shadow(0 4px 20px rgba(245, 158, 11, 0.4));
+        }
+
+        @keyframes goldShimmer {
+            to { background-position: 220% center; }
+        }
+
+        /* Luxury Glassmorphism Card */
+        .luxury-card {
+            background: linear-gradient(145deg, rgba(30, 20, 68, 0.58), rgba(15, 10, 38, 0.72));
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(251, 191, 36, 0.28);
+            box-shadow:
+                0 25px 60px -12px rgba(0, 0, 0, 0.7),
+                inset 0 1px 1px rgba(254, 240, 138, 0.2);
+        }
+
+        /* Floating Sky Lanterns (ফানুস) */
+        .sky-lantern {
+            position: fixed;
+            bottom: -140px;
+            z-index: 15;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            pointer-events: none;
+            animation: lanternAscend linear forwards;
+        }
+
+        .lantern-body {
+            width: 48px;
+            height: 62px;
+            background: radial-gradient(circle at 50% 65%, #fffbeb 5%, #fde047 35%, #f97316 75%, #9a3412 100%);
+            border-radius: 42% 42% 28% 28% / 55% 55% 35% 35%;
+            box-shadow:
+                0 0 25px rgba(251, 146, 60, 0.75),
+                0 0 55px rgba(245, 158, 11, 0.45),
+                inset 0 -8px 14px rgba(255, 255, 255, 0.85);
+            position: relative;
+            animation: lanternSway 3.5s ease-in-out infinite alternate;
+        }
+
+        .lantern-body::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 18px;
+            height: 4px;
+            background: #451a03;
+            border-radius: 2px;
+        }
+
+        .lantern-tag {
+            margin-top: 6px;
+            padding: 3px 10px;
+            background: rgba(15, 10, 38, 0.78);
+            border: 1px solid rgba(251, 191, 36, 0.45);
+            border-radius: 999px;
+            font-size: 11px;
+            color: #fef08a;
+            white-space: nowrap;
+            max-width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes lanternAscend {
+            0% {
+                transform: translateY(0) scale(0.85);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            85% {
+                opacity: 0.92;
+            }
+            100% {
+                transform: translateY(-125vh) scale(0.6);
+                opacity: 0;
+            }
+        }
+
+        @keyframes lanternSway {
+            0% { transform: rotate(-4deg) translateX(-6px); }
+            100% { transform: rotate(4deg) translateX(6px); }
+        }
+
+        /* Floating Glowing Balloons */
+        .glow-balloon {
+            position: fixed;
+            bottom: -110px;
+            width: 46px;
+            height: 58px;
+            border-radius: 50% 50% 50% 50% / 45% 45% 55% 55%;
+            cursor: pointer;
+            z-index: 20;
+            box-shadow: inset -6px -6px 14px rgba(0, 0, 0, 0.35), inset 5px 5px 12px rgba(255, 255, 255, 0.5);
+            animation: balloonRise linear forwards;
+            transition: transform 0.15s ease;
+        }
+
+        .glow-balloon:hover {
+            transform: scale(1.12);
+        }
+
+        .glow-balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            width: 1px;
+            height: 30px;
+            background: rgba(254, 240, 138, 0.45);
+        }
+
+        @keyframes balloonRise {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.9; }
+            50% { transform: translateY(-55vh) rotate(6deg); }
+            100% { transform: translateY(-120vh) rotate(-6deg); opacity: 0.8; }
+        }
+
+        /* Candle Flame & Smoke */
+        .candle-flame {
+            width: 14px;
+            height: 24px;
+            background: radial-gradient(ellipse at bottom, #ffffff 15%, #fde047 45%, #f97316 85%, transparent 100%);
+            border-radius: 50% 50% 35% 35%;
+            box-shadow: 0 0 14px #fde047, 0 0 28px #f59e0b, 0 0 42px #ea580c;
+            animation: flameDance 0.14s infinite alternate;
+            transform-origin: bottom center;
+            transition: all 0.35s ease;
+        }
+
+        .candle-flame.extinguished {
+            opacity: 0;
+            transform: scale(0) translateY(-10px);
+            pointer-events: none;
+        }
+
+        @keyframes flameDance {
+            0% { transform: scale(1) rotate(-3deg); }
+            100% { transform: scale(1.08, 0.93) rotate(3deg); }
+        }
+
+        .smoke-wisp {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            width: 7px;
+            height: 7px;
+            background: rgba(248, 250, 252, 0.75);
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .smoke-wisp.rising {
+            animation: wispRise 1.6s ease-out forwards;
+        }
+
+        @keyframes wispRise {
+            0% { opacity: 0.9; transform: translate(-50%, 0) scale(1); }
+            100% { opacity: 0; transform: translate(-20%, -42px) scale(4); }
+        }
+
+        /* 3-Tier Royal Cake Split & Knife Animation */
+        .cake-half-left, .cake-half-right {
+            transition: transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .cake-sliced .cake-half-left {
+            transform: translateX(-14px) rotate(-2deg);
+        }
+
+        .cake-sliced .cake-half-right {
+            transform: translateX(24px) translateY(6px) rotate(4deg);
+        }
+
+        .golden-knife {
+            position: absolute;
+            top: -42px;
+            right: -35px;
+            width: 120px;
+            height: 30px;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 35;
+            transform-origin: right center;
+        }
+
+        .golden-knife.cutting {
+            animation: knifeCutAnim 1.25s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes knifeCutAnim {
+            0% { opacity: 0; transform: rotate(-35deg) translate(40px, -35px); }
+            25% { opacity: 1; transform: rotate(-16deg) translate(-45px, 28px); }
+            60% { opacity: 1; transform: rotate(-4deg) translate(-52px, 105px); }
+            82% { opacity: 1; transform: rotate(-10deg) translate(-42px, 95px); }
+            100% { opacity: 0; transform: rotate(-28deg) translate(35px, -20px); }
+        }
+
+        /* 3D Flip Mystic Blessing Card */
+        .perspective-container {
+            perspective: 1200px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            min-height: 230px;
+            transition: transform 0.85s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+        }
+
+        .flip-card-inner.is-flipped {
+            transform: rotateY(180deg);
+        }
+
+        .flip-face {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 1.5rem;
+        }
+
+        .flip-back {
+            transform: rotateY(180deg);
+        }
+
+        /* Gift Box Shake on Hover */
+        .gift-card:hover .gift-emoji {
+            animation: giftShake 0.55s ease-in-out infinite;
+        }
+
+        @keyframes giftShake {
+            0%, 100% { transform: rotate(0deg) scale(1.08); }
+            25% { transform: rotate(-8deg) scale(1.12); }
+            75% { transform: rotate(8deg) scale(1.12); }
+        }
+    </style>
+</head>
+<body class="relative selection:bg-amber-400 selection:text-slate-950">
+
+    <!-- Interactive Starry Sky, Shooting Stars & Click-Anywhere Fireworks Canvas -->
+    <canvas id="sky-canvas"></canvas>
+
+    <!-- Floating Bottom-Right Music & Fireworks Controls -->
+    <div class="fixed bottom-4 right-4 z-40 flex items-center gap-2.5">
+        <button onclick="launchGrandFireworks()" title="আতশবাজি ফোটান"
+            class="p-3.5 rounded-full bg-gradient-to-tr from-rose-600 to-amber-500 text-white shadow-lg shadow-rose-600/40 hover:scale-110 active:scale-95 transition-all border border-amber-200/40">
+            <span class="text-xl leading-none">🎆</span>
+        </button>
+        <button id="musicToggleBtn" onclick="toggleMusicBox()"
+            class="px-4 py-3 rounded-full bg-gradient-to-r from-amber-300 via-amber-400 to-yellow-500 text-slate-950 font-bold shadow-lg shadow-amber-500/40 hover:scale-105 active:scale-95 transition-all flex items-center gap-2 border border-white/40">
+            <span id="musicIcon" class="text-lg leading-none">🎵</span>
+            <span id="musicLabel" class="text-sm font-anek">জন্মদিনের সুর</span>
+        </button>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="relative z-30 max-w-3xl mx-auto px-4 pt-10 pb-28 flex flex-col items-center text-center">
+
+        <!-- Luxury Golden Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/15 border border-amber-300/40 text-amber-200 text-xs sm:text-sm font-medium mb-4 shadow-md backdrop-blur-md">
+            <span>✨ আজকের দিনটি শুধুই তোমার ✨</span>
+        </div>
+
+        <!-- Hero Main Title -->
+        <h1 class="font-galada text-5xl sm:text-7xl royal-gold-text leading-tight py-1 mb-2">
+            শুভ জন্মদিন, নাজমিন!
+        </h1>
+        <p class="font-anek text-amber-100/90 text-base sm:text-lg max-w-lg mb-2">
+            তারার আলোয় ভরে উঠুক তোমার আগামীর প্রতিটি পথ ✨
+        </p>
+        <p class="text-xs text-amber-300/75 mb-8">
+            (স্ক্রিনের যেকোনো জায়গায় ট্যাপ করলে আতশবাজি ফুটবে 🎇)
+        </p>
+
+        <!-- SECTION 1: INTERACTIVE 3-TIER ROYAL CAKE (BLOW CANDLES + CUT CAKE) -->
+        <section class="luxury-card w-full rounded-3xl p-5 sm:p-8 mb-8 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-48 h-48 bg-amber-400/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-rose-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <h2 id="cakePromptTitle" class="text-xl sm:text-2xl font-bold text-amber-300 mb-1">
+                🕯️ প্রথমে মোমবাতি নেভাও, তারপর কেক কাটো!
+            </h2>
+            <p id="cakePromptSub" class="text-xs sm:text-sm text-amber-100/75 mb-5">
+                মোমবাতিতে ট্যাপ করো অথবা নিচের বাটনগুলো ব্যবহার করো 🎂
+            </p>
+
+            <!-- 3-Tier Cake Stage -->
+            <div id="royalCakeStage" onclick="onCakeAreaTap()" class="relative mx-auto w-72 sm:w-80 pt-10 pb-2 cursor-pointer">
+                
+                <!-- Gleaming Golden Cake Knife -->
+                <div id="goldenKnife" class="golden-knife">
+                    <svg viewBox="0 0 150 38" class="w-full h-full drop-shadow-xl">
+                        <defs>
+                            <linearGradient id="goldBlade" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ffffff"/>
+                                <stop offset="45%" stop-color="#fef08a"/>
+                                <stop offset="100%" stop-color="#f59e0b"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M4,19 Q45,6 98,12 L98,25 Q45,28 4,19 Z" fill="url(#goldBlade)" stroke="#fde047" stroke-width="1"/>
+                        <rect x="98" y="10" width="46" height="16" rx="7" fill="#4c0519" stroke="#fde047" stroke-width="1.5"/>
+                        <circle cx="110" cy="18" r="2.2" fill="#fde047"/>
+                        <circle cx="130" cy="18" r="2.2" fill="#fde047"/>
+                    </svg>
+                </div>
+
+                <!-- Glowing Candles Row -->
+                <div onclick="event.stopPropagation(); blowOutCandles();" class="flex justify-center gap-7 mb-1 relative z-20">
+                    <!-- Candle 1 -->
+                    <div class="flex flex-col items-center relative">
+                        <div class="smoke-wisp" id="wisp1"></div>
+                        <div class="candle-flame mb-1" id="cFlame1"></div>
+                        <div class="w-2.5 h-9 rounded-t-sm bg-gradient-to-b from-rose-200 via-rose-500 to-rose-800 border-b border-rose-950"></div>
+                    </div>
+                    <!-- Candle 2 (Center Tall Gold) -->
+                    <div class="flex flex-col items-center relative -mt-2.5">
+                        <div class="smoke-wisp" id="wisp2"></div>
+                        <div class="candle-flame mb-1" id="cFlame2"></div>
+                        <div class="w-3 h-11 rounded-t-sm bg-gradient-to-b from-amber-100 via-amber-400 to-amber-700 border-b border-amber-950"></div>
+                    </div>
+                    <!-- Candle 3 -->
+                    <div class="flex flex-col items-center relative">
+                        <div class="smoke-wisp" id="wisp3"></div>
+                        <div class="candle-flame mb-1" id="cFlame3"></div>
+                        <div class="w-2.5 h-9 rounded-t-sm bg-gradient-to-b from-purple-200 via-purple-500 to-purple-800 border-b border-purple-950"></div>
+                    </div>
+                </div>
+
+                <!-- 3-Tier Velvet & Gold Split Cake -->
+                <div class="relative flex justify-center items-end">
+                    <!-- Left Half of 3-Tier Cake -->
+                    <div class="cake-half-left flex flex-col items-end">
+                        <!-- Tier 1 (Top) Left -->
+                        <div class="w-16 h-10 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-tl-xl border-b-2 border-amber-700 relative overflow-hidden">
+                            <div class="flex justify-around">
+                                <div class="w-3.5 h-3.5 bg-rose-950 rounded-b-full"></div>
+                                <div class="w-4 h-4 bg-rose-950 rounded-b-full"></div>
+                            </div>
+                        </div>
+                        <!-- Tier 2 (Middle) Left -->
+                        <div class="w-24 h-12 bg-gradient-to-r from-rose-700 to-pink-600 rounded-tl-xl border-t-2 border-amber-300 border-b-2 border-rose-950 relative flex items-center justify-end pr-1">
+                            <span class="text-[11px] font-extrabold tracking-widest text-amber-200">NAZ</span>
+                        </div>
+                        <!-- Tier 3 (Bottom) Left -->
+                        <div class="w-32 h-14 bg-gradient-to-r from-indigo-950 to-purple-900 rounded-tl-xl rounded-bl-lg border-t-2 border-amber-400 flex items-center justify-around px-2 text-amber-300 text-xs shadow-xl">
+                            <span>✦</span><span>👑</span><span>✦</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Half (Slice) of 3-Tier Cake -->
+                    <div class="cake-half-right flex flex-col items-start relative">
+                        <!-- Glowing Festive Sponge Interior Revealed on Cut -->
+                        <div id="cakeInteriorGlow" class="hidden absolute left-0 top-0 bottom-0 w-2.5 bg-gradient-to-b from-amber-200 via-rose-300 to-amber-300 z-10 rounded-l-sm shadow-[0_0_15px_#fde047]"></div>
+                        <!-- Tier 1 (Top) Right -->
+                        <div class="w-14 h-10 bg-gradient-to-r from-yellow-500 to-amber-300 rounded-tr-xl border-b-2 border-amber-700 relative overflow-hidden">
+                            <div class="flex justify-around">
+                                <div class="w-4 h-4 bg-rose-950 rounded-b-full"></div>
+                                <div class="w-3.5 h-3 bg-rose-950 rounded-b-full"></div>
+                            </div>
+                        </div>
+                        <!-- Tier 2 (Middle) Right -->
+                        <div class="w-20 h-12 bg-gradient-to-r from-pink-600 to-rose-500 rounded-tr-xl border-t-2 border-amber-300 border-b-2 border-rose-950 relative flex items-center justify-start pl-1">
+                            <span class="text-[11px] font-extrabold tracking-widest text-amber-200">MIN</span>
+                        </div>
+                        <!-- Tier 3 (Bottom) Right -->
+                        <div class="w-28 h-14 bg-gradient-to-r from-purple-900 to-indigo-950 rounded-tr-xl rounded-br-lg border-t-2 border-amber-400 flex items-center justify-around px-2 text-amber-300 text-xs shadow-xl">
+                            <span>♥</span><span>✦</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Royal Gold Cake Platter -->
+                <div class="w-72 sm:w-80 h-3.5 mx-auto bg-gradient-to-r from-amber-300 via-white to-amber-300 rounded-full shadow-2xl mt-0.5 border-b-2 border-amber-500"></div>
+            </div>
+
+            <!-- Cake Controls -->
+            <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+                <button id="blowCandlesBtn" onclick="blowOutCandles()"
+                    class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-300 to-amber-500 text-slate-950 font-bold text-sm sm:text-base shadow-lg shadow-amber-500/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+                    <span>🌬️ মোমবাতি নেভাও</span>
+                </button>
+
+                <button id="cutCakeBtn" onclick="sliceRoyalCake()"
+                    class="px-5 py-2.5 rounded-full bg-gradient-to-r from-rose-600 via-pink-600 to-purple-700 text-white font-bold text-sm sm:text-base shadow-lg shadow-rose-600/35 hover:scale-105 active:scale-95 transition-all flex items-center gap-2 border border-amber-300/30">
+                    <span>🔪 কেক কাটুন</span>
+                </button>
+
+                <button id="resetCakeBtn" onclick="resetRoyalCake()"
+                    class="hidden px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-amber-200 border border-amber-300/35 text-xs sm:text-sm font-medium transition-all">
+                    🔄 আবার সাজান
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SKY LANTERN WISH MAKER (আকাশে ফানুস উড়াও) -->
+        <section class="luxury-card w-full rounded-3xl p-5 sm:p-7 mb-8 relative overflow-hidden">
+            <div class="flex items-center justify-center gap-2 mb-1">
+                <span class="text-2xl">🏮</span>
+                <h2 class="text-xl sm:text-2xl font-bold text-amber-300">আকাশে ইচ্ছার ফানুস উড়াও</h2>
+            </div>
+            <p class="text-xs sm:text-sm text-amber-100/75 mb-4">
+                তোমার মনের কোনো সুন্দর ইচ্ছা লিখে রাতের আকাশে ফানুস উড়িয়ে দাও!
+            </p>
+
+            <form onsubmit="releaseUserLantern(event)" class="flex flex-col sm:flex-row gap-2.5 max-w-xl mx-auto">
+                <input id="wishInput" type="text" maxlength="45"
+                    placeholder="যেমন: আমার সব স্বপ্ন পূরণ হোক..."
+                    class="flex-1 px-4 py-3 rounded-2xl bg-slate-950/70 border border-amber-400/35 text-amber-50 placeholder-amber-200/40 text-sm focus:outline-none focus:border-amber-300 transition-all" />
+                <button type="submit"
+                    class="px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500 text-slate-950 font-bold text-sm shadow-lg shadow-orange-500/30 hover:scale-105 active:scale-95 transition-all whitespace-nowrap">
+                    ফানুস উড়িয়ে দাও 🏮
+                </button>
+            </form>
+        </section>
+
+        <!-- SECTION 3: 3D FLIP MYSTIC BIRTHDAY BLESSING CARD (ভাগ্য ও আশীর্বাদ কার্ড) -->
+        <section class="w-full mb-8">
+            <h2 class="text-xl sm:text-2xl font-bold text-amber-300 mb-1">
+                🔮 নাজমিনের জন্মদিনের বিশেষ আশীর্বাদ কার্ড
+            </h2>
+            <p class="text-xs sm:text-sm text-amber-100/75 mb-4">
+                কার্ডটিতে ট্যাপ করে দেখে নাও নতুন বছর তোমার জন্য কী বার্তা নিয়ে এসেছে!
+            </p>
+
+            <div class="perspective-container max-w-md mx-auto">
+                <div id="mysticCardInner" onclick="flipMysticCard()" class="flip-card-inner cursor-pointer">
+                    
+                    <!-- Card Front -->
+                    <div class="flip-face luxury-card p-6 flex flex-col items-center justify-center border-2 border-amber-400/40">
+                        <div class="w-16 h-16 rounded-full bg-amber-400/15 border border-amber-300/40 flex items-center justify-center text-3xl mb-3 shadow-inner">
+                            ✨
+                        </div>
+                        <h3 class="font-galada text-2xl sm:text-3xl text-amber-300 mb-1">রহস্যময় শুভকামনা</h3>
+                        <p class="text-xs sm:text-sm text-amber-100/80">কার্ডটি উল্টাতে এখানে ট্যাপ করো</p>
+                        <div class="mt-4 flex gap-2 text-amber-400/60 text-xs">
+                            <span>✦</span><span>নাজমিন স্পেশাল এডিশন</span><span>✦</span>
+                        </div>
+                    </div>
+
+                    <!-- Card Back (Revealed Blessing) -->
+                    <div class="flip-face flip-back luxury-card p-6 flex flex-col items-center justify-center border-2 border-amber-300/60 bg-gradient-to-br from-purple-950/90 via-indigo-950/90 to-rose-950/90">
+                        <span id="blessingEmoji" class="text-4xl mb-2">🌟</span>
+                        <h4 id="blessingTitle" class="font-bold text-amber-300 text-lg mb-1.5">নক্ষত্রের আশীর্বাদ</h4>
+                        <p id="blessingText" class="text-sm sm:text-base text-amber-50 leading-relaxed mb-4">
+                            এই নতুন বছরে তোমার প্রতিটি পদক্ষেপ হবে সাফল্যের, আর তোমার হাসি ছড়িয়ে দেবে চারপাশে অনাবিল আলো।
+                        </p>
+                        <button onclick="event.stopPropagation(); nextMysticBlessing();"
+                            class="px-4 py-1.5 rounded-full bg-amber-400/20 hover:bg-amber-400/30 border border-amber-300/40 text-amber-200 text-xs font-medium transition-all">
+                            ✨ আরেকটি আশীর্বাদ দেখো
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: INTERACTIVE 3D SURPRISE GIFT BOXES -->
+        <section class="w-full">
+            <h2 class="text-xl sm:text-2xl font-bold text-amber-300 mb-1">
+                🎁 ৩টি রাজকীয় সারপ্রাইজ উপহার
+            </h2>
+            <p class="text-xs sm:text-sm text-amber-100/75 mb-5">
+                প্রতিটি উপহারের বক্সে ট্যাপ করে খুলে দেখো!
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <!-- Box 1: স্বপ্ন -->
+                <div onclick="openLuxuryGift(1)" class="gift-card luxury-card rounded-2xl p-6 cursor-pointer flex flex-col items-center justify-center hover:border-amber-300/60 transition-all">
+                    <div class="gift-emoji text-5xl mb-3 transition-transform">🎁</div>
+                    <h3 class="font-bold text-amber-300 text-lg">স্বপ্ন</h3>
+                    <p class="text-xs text-amber-100/70 mt-1">খুলতে ট্যাপ করো</p>
+                </div>
+
+                <!-- Box 2: আনন্দ -->
+                <div onclick="openLuxuryGift(2)" class="gift-card luxury-card rounded-2xl p-6 cursor-pointer flex flex-col items-center justify-center hover:border-rose-300/60 transition-all">
+                    <div class="gift-emoji text-5xl mb-3 transition-transform">🎀</div>
+                    <h3 class="font-bold text-rose-300 text-lg">আনন্দ</h3>
+                    <p class="text-xs text-amber-100/70 mt-1">খুলতে ট্যাপ করো</p>
+                </div>
+
+                <!-- Box 3: সাফল্য -->
+                <div onclick="openLuxuryGift(3)" class="gift-card luxury-card rounded-2xl p-6 cursor-pointer flex flex-col items-center justify-center hover:border-purple-300/60 transition-all">
+                    <div class="gift-emoji text-5xl mb-3 transition-transform">👑</div>
+                    <h3 class="font-bold text-purple-300 text-lg">সাফল্য</h3>
+                    <p class="text-xs text-amber-100/70 mt-1">খুলতে ট্যাপ করো</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Glassmorphism Surprise Gift Modal -->
+    <div id="giftModal" onclick="closeGiftModal()" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div onclick="event.stopPropagation()" class="luxury-card max-w-sm w-full rounded-3xl p-7 text-center border-2 border-amber-300/50 transform transition-all scale-95 opacity-0" id="giftModalBox">
+            <div id="modalGiftIcon" class="text-6xl mb-3">🌟</div>
+            <h3 id="modalGiftTitle" class="font-galada text-3xl text-amber-300 mb-2">স্বপ্ন পূরণের অঙ্গীকার</h3>
+            <p id="modalGiftBody" class="text-sm sm:text-base text-amber-50 leading-relaxed mb-6">
+                তোমার চোখের প্রতিটি স্বপ্ন যেন ডানা মেলে আকাশ ছোঁয়।
+            </p>
+            <button onclick="closeGiftModal()"
+                class="px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-300 to-amber-500 text-slate-950 font-bold text-sm shadow-lg hover:scale-105 transition-all">
+                ধন্যবাদ ✨
+            </button>
+        </div>
+    </div>
+
+    <script>
+        /* =========================================================
+           1. WEB AUDIO API HARP / MUSIC BOX & SOUND EFFECTS
+           ========================================================= */
+        let audioCtx = null;
+        let isMusicPlaying = false;
+        let musicLoopTimeout = null;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        function playHarpNote(freq, duration, delay = 0, volume = 0.14) {
+            initAudio();
+            const now = audioCtx.currentTime + delay;
+            const osc = audioCtx.createOscillator();
+            const overtone = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, now);
+
+            overtone.type = 'triangle';
+            overtone.frequency.setValueAtTime(freq * 2, now);
+
+            const overtoneGain = audioCtx.createGain();
+            overtoneGain.gain.setValueAtTime(0.03, now);
+
+            gain.gain.setValueAtTime(0.001, now);
+            gain.gain.exponentialRampToValueAtTime(volume, now + 0.025);
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+            osc.connect(gain);
+            overtone.connect(overtoneGain);
+            overtoneGain.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start(now);
+            overtone.start(now);
+            osc.stop(now + duration + 0.05);
+            overtone.stop(now + duration + 0.05);
+        }
+
+        const happyBirthdayNotes = [
+            { f: 261.63, d: 0.4, t: 0.0 },
+            { f: 261.63, d: 0.4, t: 0.45 },
+            { f: 293.66, d: 0.8, t: 0.9 },
+            { f: 261.63, d: 0.8, t: 1.75 },
+            { f: 349.23, d: 0.8, t: 2.6 },
+            { f: 329.63, d: 1.4, t: 3.45 },
+
+            { f: 261.63, d: 0.4, t: 5.0 },
+            { f: 261.63, d: 0.4, t: 5.45 },
+            { f: 293.66, d: 0.8, t: 5.9 },
+            { f: 261.63, d: 0.8, t: 6.75 },
+            { f: 392.00, d: 0.8, t: 7.6 },
+            { f: 349.23, d: 1.4, t: 8.45 },
+
+            { f: 261.63, d: 0.4, t: 10.0 },
+            { f: 261.63, d: 0.4, t: 10.45 },
+            { f: 523.25, d: 0.8, t: 10.9 },
+            { f: 440.00, d: 0.8, t: 11.75 },
+            { f: 349.23, d: 0.7, t: 12.6 },
+            { f: 329.63, d: 0.7, t: 13.35 },
+            { f: 293.66, d: 1.4, t: 14.1 },
+
+            { f: 466.16, d: 0.4, t: 15.7 },
+            { f: 466.16, d: 0.4, t: 16.15 },
+            { f: 440.00, d: 0.8, t: 16.6 },
+            { f: 349.23, d: 0.8, t: 17.45 },
+            { f: 392.00, d: 0.8, t: 18.3 },
+            { f: 349.23, d: 1.6, t: 19.15 }
+        ];
+
+        function runMusicBoxLoop() {
+            if (!isMusicPlaying) return;
+            happyBirthdayNotes.forEach(n => playHarpNote(n.f, n.d * 1.5, n.t, 0.13));
+            musicLoopTimeout = setTimeout(runMusicBoxLoop, 21200);
+        }
+
+        function toggleMusicBox() {
+            const icon = document.getElementById('musicIcon');
+            const label = document.getElementById('musicLabel');
+            if (!isMusicPlaying) {
+                isMusicPlaying = true;
+                icon.textContent = '⏸️';
+                label.textContent = 'সুর বন্ধ করুন';
+                runMusicBoxLoop();
+            } else {
+                isMusicPlaying = false;
+                clearTimeout(musicLoopTimeout);
+                icon.textContent = '🎵';
+                label.textContent = 'জন্মদিনের সুর';
+            }
+        }
+
+        // Subtle realistic firework sparkle sound
+        function playSparklePop() {
+            initAudio();
+            const now = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(520 + Math.random() * 400, now);
+            osc.frequency.exponentialRampToValueAtTime(110, now + 0.14);
+            gain.gain.setValueAtTime(0.08, now);
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.14);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start(now);
+            osc.stop(now + 0.15);
+        }
+
+        function playWindBlow() {
+            initAudio();
+            const len = audioCtx.sampleRate * 0.45;
+            const buf = audioCtx.createBuffer(1, len, audioCtx.sampleRate);
+            const data = buf.getChannelData(0);
+            for (let i = 0; i < len; i++) data[i] = Math.random() * 2 - 1;
+            const src = audioCtx.createBufferSource();
+            src.buffer = buf;
+            const filter = audioCtx.createBiquadFilter();
+            filter.type = 'lowpass';
+            filter.frequency.setValueAtTime(450, audioCtx.currentTime);
+            const gain = audioCtx.createGain();
+            gain.gain.setValueAtTime(0.18, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.45);
+            src.connect(filter);
+            filter.connect(gain);
+            gain.connect(audioCtx.destination);
+            src.start();
+        }
+
+        function playMagicalChime() {
+            [523.25, 659.25, 783.99, 1046.5, 1318.51].forEach((f, idx) => {
+                playHarpNote(f, 0.7, idx * 0.07, 0.12);
+            });
+        }
+
+        /* =========================================================
+           2. STARRY COSMIC SKY, SHOOTING STARS & FIREWORKS CANVAS
+           ========================================================= */
+        const skyCanvas = document.getElementById('sky-canvas');
+        const ctx = skyCanvas.getContext('2d');
+        let stars = [];
+        let shootingStars = [];
+        let particles = [];
+
+        function resizeSky() {
+            skyCanvas.width = window.innerWidth;
+            skyCanvas.height = window.innerHeight;
+            initStars();
+        }
+
+        function initStars() {
+            stars = [];
+            const count = Math.min(130, Math.floor((skyCanvas.width * skyCanvas.height) / 9000));
+            for (let i = 0; i < count; i++) {
+                stars.push({
+                    x: Math.random() * skyCanvas.width,
+                    y: Math.random() * skyCanvas.height,
+                    r: Math.random() * 1.6 + 0.4,
+                    alpha: Math.random(),
+                    speed: Math.random() * 0.02 + 0.005,
+                    isGold: Math.random() > 0.35
+                });
+            }
+        }
+
+        function spawnShootingStar() {
+            shootingStars.push({
+                x: Math.random() * skyCanvas.width * 0.8,
+                y: Math.random() * skyCanvas.height * 0.35,
+                vx: 9 + Math.random() * 5,
+                vy: 4 + Math.random() * 3,
+                len: 70 + Math.random() * 50,
+                alpha: 1
+            });
+        }
+
+        const fireworkColors = ['#fde047', '#f59e0b', '#fb7185', '#f472b6', '#c084fc', '#ffffff'];
+
+        function createFireworkBurst(x, y, count = 55) {
+            for (let i = 0; i < count; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 6.5 + 1.5;
+                particles.push({
+                    x,
+                    y,
+                    vx: Math.cos(angle) * speed,
+                    vy: Math.sin(angle) * speed,
+                    size: Math.random() * 3 + 1.5,
+                    color: fireworkColors[Math.floor(Math.random() * fireworkColors.length)],
+                    alpha: 1,
+                    decay: Math.random() * 0.015 + 0.012,
+                    gravity: 0.07
+                });
+            }
+        }
+
+        function launchGrandFireworks() {
+            playMagicalChime();
+            const positions = [
+                [skyCanvas.width * 0.25, skyCanvas.height * 0.3],
+                [skyCanvas.width * 0.75, skyCanvas.height * 0.28],
+                [skyCanvas.width * 0.5, skyCanvas.height * 0.22],
+                [skyCanvas.width * 0.35, skyCanvas.height * 0.45],
+                [skyCanvas.width * 0.65, skyCanvas.height * 0.42]
+            ];
+            positions.forEach((pos, idx) => {
+                setTimeout(() => {
+                    createFireworkBurst(pos[0], pos[1], 70);
+                    playSparklePop();
+                }, idx * 220);
+            });
+        }
+
+        // Click/Tap Anywhere Fireworks
+        document.addEventListener('pointerdown', (e) => {
+            if (e.target.closest('button, input, form, .gift-card, #mysticCardInner, #royalCakeStage, .glow-balloon')) {
+                return;
+            }
+            createFireworkBurst(e.clientX, e.clientY, 50);
+            playSparklePop();
+        });
+
+        function animateSky() {
+            ctx.clearRect(0, 0, skyCanvas.width, skyCanvas.height);
+
+            // Draw Twinkling Stars
+            stars.forEach(s => {
+                s.alpha += s.speed;
+                if (s.alpha > 1 || s.alpha < 0.15) s.speed *= -1;
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                ctx.fillStyle = s.isGold
+                    ? `rgba(254, 240, 138, ${s.alpha})`
+                    : `rgba(255, 255, 255, ${s.alpha * 0.85})`;
+                ctx.fill();
+            });
+
+            // Draw Shooting Stars
+            for (let i = shootingStars.length - 1; i >= 0; i--) {
+                const ss = shootingStars[i];
+                ss.x += ss.vx;
+                ss.y += ss.vy;
+                ss.alpha -= 0.018;
+                if (ss.alpha <= 0) {
+                    shootingStars.splice(i, 1);
+                    continue;
+                }
+                const grad = ctx.createLinearGradient(ss.x, ss.y, ss.x - ss.len, ss.y - ss.len * 0.45);
+                grad.addColorStop(0, `rgba(254, 240, 138, ${ss.alpha})`);
+                grad.addColorStop(1, 'rgba(254, 240, 138, 0)');
+                ctx.strokeStyle = grad;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(ss.x, ss.y);
+                ctx.lineTo(ss.x - ss.len, ss.y - ss.len * 0.45);
+                ctx.stroke();
+            }
+
+            // Draw Firework Particles
+            for (let i = particles.length - 1; i >= 0; i--) {
+                const p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                p.vy += p.gravity;
+                p.vx *= 0.98;
+                p.alpha -= p.decay;
+                if (p.alpha <= 0) {
+                    particles.splice(i, 1);
+                    continue;
+                }
+                ctx.save();
+                ctx.globalAlpha = p.alpha;
+                ctx.fillStyle = p.color;
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = p.color;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+
+            requestAnimationFrame(animateSky);
+        }
+
+        /* =========================================================
+           3. FLOATING BALLOONS
+           ========================================================= */
+        const balloonStyles = [
+            'radial-gradient(circle at 30% 30%, #fef08a, #d97706)',
+            'radial-gradient(circle at 30% 30%, #fda4af, #be123c)',
+            'radial-gradient(circle at 30% 30%, #e9d5ff, #6b21a8)'
+        ];
+
+        function spawnGlowBalloon() {
+            const b = document.createElement('div');
+            b.className = 'glow-balloon';
+            const dur = 8 + Math.random() * 4;
+            b.style.left = (5 + Math.random() * 88) + 'vw';
+            b.style.background = balloonStyles[Math.floor(Math.random() * balloonStyles.length)];
+            b.style.animationDuration = dur + 's';
+
+            b.addEventListener('click', (e) => {
+                e.stopPropagation();
+                playSparklePop();
+                createFireworkBurst(e.clientX, e.clientY, 35);
+                b.remove();
+            });
+
+            document.body.appendChild(b);
+            setTimeout(() => b.remove(), dur * 1000);
+        }
+
+        /* =========================================================
+           4. INTERACTIVE 3-TIER ROYAL CAKE LOGIC
+           ========================================================= */
+        let candlesLit = true;
+        let cakeSliced = false;
+
+        function onCakeAreaTap() {
+            if (candlesLit) {
+                blowOutCandles();
+            } else if (!cakeSliced) {
+                sliceRoyalCake();
+            }
+        }
+
+        function blowOutCandles() {
+            if (!candlesLit) return;
+            candlesLit = false;
+            playWindBlow();
+
+            [1, 2, 3].forEach(n => {
+                document.getElementById(`cFlame${n}`).classList.add('extinguished');
+                const wisp = document.getElementById(`wisp${n}`);
+                wisp.classList.remove('rising');
+                void wisp.offsetWidth;
+                wisp.classList.add('rising');
+            });
+
+            document.getElementById('cakePromptTitle').textContent = '✨ চমৎকার! এবার "কেক কাটুন" বাটনে ক্লিক করো! 🎂';
+            document.getElementById('cakePromptSub').textContent = 'মোমবাতি নিভে গেছে, এবার রাজকীয় কেক কাটার পালা!';
+            document.getElementById('blowCandlesBtn').classList.add('opacity-45', 'pointer-events-none');
+            document.getElementById('resetCakeBtn').classList.remove('hidden');
+
+            setTimeout(() => {
+                playMagicalChime();
+                const rect = document.getElementById('royalCakeStage').getBoundingClientRect();
+                createFireworkBurst(rect.left + rect.width / 2, rect.top + 40, 60);
+            }, 300);
+        }
+
+        function sliceRoyalCake() {
+            if (cakeSliced) return;
+            if (candlesLit) {
+                candlesLit = false;
+                [1, 2, 3].forEach(n => {
+                    document.getElementById(`cFlame${n}`).classList.add('extinguished');
+                    document.getElementById(`wisp${n}`).classList.add('rising');
+                });
+                document.getElementById('blowCandlesBtn').classList.add('opacity-45', 'pointer-events-none');
+            }
+
+            cakeSliced = true;
+            const knife = document.getElementById('goldenKnife');
+            const stage = document.getElementById('royalCakeStage');
+            const interior = document.getElementById('cakeInteriorGlow');
+
+            knife.classList.remove('cutting');
+            void knife.offsetWidth;
+            knife.classList.add('cutting');
+
+            setTimeout(() => {
+                stage.classList.add('cake-sliced');
+                interior.classList.remove('hidden');
+                launchGrandFireworks();
+
+                document.getElementById('cakePromptTitle').textContent = '🎉 শুভ জন্মদিন নাজমিন! কেক কাটা সম্পন্ন! 🍰';
+                document.getElementById('cakePromptSub').textContent = 'আনন্দ আর মিষ্টতায় ভরে থাকুক তোমার প্রতিটি দিন!';
+                document.getElementById('cutCakeBtn').classList.add('opacity-45', 'pointer-events-none');
+                document.getElementById('resetCakeBtn').classList.remove('hidden');
+            }, 550);
+        }
+
+        function resetRoyalCake() {
+            candlesLit = true;
+            cakeSliced = false;
+
+            [1, 2, 3].forEach(n => {
+                document.getElementById(`cFlame${n}`).classList.remove('extinguished');
+                document.getElementById(`wisp${n}`).classList.remove('rising');
+            });
+
+            document.getElementById('royalCakeStage').classList.remove('cake-sliced');
+            document.getElementById('cakeInteriorGlow').classList.add('hidden');
+            document.getElementById('goldenKnife').classList.remove('cutting');
+
+            document.getElementById('blowCandlesBtn').classList.remove('opacity-45', 'pointer-events-none');
+            document.getElementById('cutCakeBtn').classList.remove('opacity-45', 'pointer-events-none');
+            document.getElementById('resetCakeBtn').classList.add('hidden');
+
+            document.getElementById('cakePromptTitle').textContent = '🕯️ প্রথমে মোমবাতি নেভাও, তারপর কেক কাটো!';
+            document.getElementById('cakePromptSub').textContent = 'মোমবাতিতে ট্যাপ করো অথবা নিচের বাটনগুলো ব্যবহার করো 🎂';
+        }
+
+        /* =========================================================
+           5. SKY LANTERN WISH MAKER (আকাশে ফানুস উড়াও)
+           ========================================================= */
+        function spawnSkyLantern(wishText, leftPercent = null) {
+            const lantern = document.createElement('div');
+            lantern.className = 'sky-lantern';
+            const left = leftPercent !== null ? leftPercent : (10 + Math.random() * 75);
+            const duration = 13 + Math.random() * 4;
+
+            lantern.style.left = left + 'vw';
+            lantern.style.animationDuration = duration + 's';
+
+            const body = document.createElement('div');
+            body.className = 'lantern-body';
+
+            const tag = document.createElement('div');
+            tag.className = 'lantern-tag';
+            tag.textContent = `🏮 ${wishText}`;
+
+            lantern.appendChild(body);
+            lantern.appendChild(tag);
+            document.body.appendChild(lantern);
+
+            setTimeout(() => lantern.remove(), duration * 1000);
+        }
+
+        function releaseUserLantern(event) {
+            event.preventDefault();
+            const input = document.getElementById('wishInput');
+            const text = input.value.trim() || 'নাজমিনের সব স্বপ্ন পূরণ হোক ✨';
+            spawnSkyLantern(text);
+            playMagicalChime();
+            createFireworkBurst(window.innerWidth * 0.5, window.innerHeight * 0.55, 45);
+            input.value = '';
+        }
+
+        /* =========================================================
+           6. 3D FLIP MYSTIC BLESSING CARD
+           ========================================================= */
+        const mysticBlessings = [
+            {
+                emoji: '🌟',
+                title: 'নক্ষত্রের আশীর্বাদ',
+                text: 'এই নতুন বছরে তোমার প্রতিটি পদক্ষেপ হবে সাফল্যের, আর তোমার হাসি চারপাশে ছড়িয়ে দেবে অনাবিল আলো।'
+            },
+            {
+                emoji: '🦋',
+                title: 'স্বপ্নডানার বার্তা',
+                text: 'যে স্বপ্নগুলো তুমি এতদিন মনের কোণে সাজিয়ে রেখেছ, এই বছর সেগুলো একে একে বাস্তবে রূপ নিতে শুরু করবে।'
+            },
+            {
+                emoji: '💫',
+                title: 'প্রশান্তির প্রহর',
+                text: 'জীবনের সব ব্যস্ততার মাঝেও তুমি খুঁজে পাবে অপার মানসিক শান্তি, সুস্থতা এবং প্রিয় মানুষদের অকৃত্রিম ভালোবাসা।'
+            },
+            {
+                emoji: '👑',
+                title: 'রাজকীয় সাফল্য',
+                text: 'তোমার মেধা ও আন্তরিকতা তোমাকে নিয়ে যাবে অনন্য উচ্চতায়। আগামীর প্রতিটি দিন হোক তোমার জয়ের গল্প।'
+            }
+        ];
+
+        let blessingIdx = 0;
+
+        function flipMysticCard() {
+            const card = document.getElementById('mysticCardInner');
+            card.classList.toggle('is-flipped');
+            playMagicalChime();
+        }
+
+        function nextMysticBlessing() {
+            blessingIdx = (blessingIdx + 1) % mysticBlessings.length;
+            const item = mysticBlessings[blessingIdx];
+            playMagicalChime();
+            document.getElementById('blessingEmoji').textContent = item.emoji;
+            document.getElementById('blessingTitle').textContent = item.title;
+            document.getElementById('blessingText').textContent = item.text;
+        }
+
+        /* =========================================================
+           7. LUXURY SURPRISE GIFT BOXES & MODAL
+           ========================================================= */
+        const luxuryGifts = {
+            1: {
+                icon: '🌠',
+                title: 'স্বপ্ন পূরণের অঙ্গীকার',
+                body: 'তোমার চোখের প্রতিটি স্বপ্ন যেন ডানা মেলে আকাশ ছোঁয়। আগামীর প্রতিটি সকাল তোমার জন্য নিয়ে আসুক নতুন সম্ভাবনা।'
+            },
+            2: {
+                icon: '💖',
+                title: 'অনাবিল আনন্দ',
+                body: 'তোমার প্রাণখোলা হাসি যেন কখনো মলিন না হয়। জীবনের প্রতিটি মুহূর্ত ভরে উঠুক নির্মল আনন্দ ও সুন্দর স্মৃতিতে।'
+            },
+            3: {
+                icon: '🏆',
+                title: 'অপ্রতিরোধ্য সাফল্য',
+                body: 'তুমি যে পথেই পা বাড়াও, সাফল্য যেন তোমার ছায়াসঙ্গী হয়ে থাকে। শুভ জন্মদিন, নাজমিন!'
+            }
+        };
+
+        function openLuxuryGift(id) {
+            const gift = luxuryGifts[id];
+            document.getElementById('modalGiftIcon').textContent = gift.icon;
+            document.getElementById('modalGiftTitle').textContent = gift.title;
+            document.getElementById('modalGiftBody').textContent = gift.body;
+
+            const modal = document.getElementById('giftModal');
+            const box = document.getElementById('giftModalBox');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            requestAnimationFrame(() => {
+                box.classList.remove('scale-95', 'opacity-0');
+                box.classList.add('scale-100', 'opacity-100');
+            });
+
+            playMagicalChime();
+            createFireworkBurst(window.innerWidth * 0.5, window.innerHeight * 0.45, 55);
+        }
+
+        function closeGiftModal() {
+            const modal = document.getElementById('giftModal');
+            const box = document.getElementById('giftModalBox');
+            box.classList.add('scale-95', 'opacity-0');
+            box.classList.remove('scale-100', 'opacity-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 200);
+        }
+
+        /* =========================================================
+           8. INITIALIZATION ON WINDOW LOAD
+           ========================================================= */
+        window.addEventListener('resize', resizeSky);
+
+        window.onload = function () {
+            resizeSky();
+            animateSky();
+
+            // Initial celebratory fireworks
+            setTimeout(() => {
+                createFireworkBurst(window.innerWidth * 0.3, window.innerHeight * 0.3, 60);
+                createFireworkBurst(window.innerWidth * 0.7, window.innerHeight * 0.3, 60);
+            }, 400);
+
+            // Pre-float 3 glowing wish lanterns
+            setTimeout(() => spawnSkyLantern('শুভ জন্মদিন নাজমিন ✨', 16), 600);
+            setTimeout(() => spawnSkyLantern('সুস্থতা ও অনাবিল আনন্দ 💖', 74), 2400);
+            setTimeout(() => spawnSkyLantern('সফল হোক আগামীর পথচলা 🌟', 45), 4500);
+
+            // Periodic shooting stars & balloons
+            setInterval(spawnShootingStar, 4500);
+            setInterval(spawnGlowBalloon, 2800);
+        };
+    </script>
+</body>
+</html>
